@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MulitpleBrowserTestSuite" parallel="tests" thread-count="3">
+    <listeners>
+        <listener class-name="org.testng.reporters.EmailableReporter2"></listener>
+    </listeners>
+    <test name="googleBrowserTest">
+        <parameter name="browser" value="google"></parameter>
+        <classes>
+            <class name="RockstarGameTests.RockstarGamesTests"></class>
+        </classes>
+    </test>
+    <test name="fireFoxBrowserTest">
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="RockstarGameTests.RockstarGamesTests"></class>
+        </classes>
+    </test>
+    <test name="EdgeBrowserTest">
+        <parameter name="browser" value="edge"></parameter>
+        <classes>
+            <class name="RockstarGameTests.RockstarGamesTests"></class>
+        </classes>
+    </test>
+</suite>
